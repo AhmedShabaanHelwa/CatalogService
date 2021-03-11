@@ -1,5 +1,6 @@
 ﻿using Catalog.Domain;
 using Catalog.Domain.Repositories;
+using Catalog.Infrastructure.SchemaDefinitions;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,13 @@ namespace Catalog.Infrastructure
 
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        { 
+        {
+            // Overriden modification: Create configurations of schemas
+            modelBuilder.ApplyConfiguration(new ItemEntitySchemaDefinition());
+            modelBuilder.ApplyConfiguration(new ArtistEntitySchemaDefintion());
+            modelBuilder.ApplyConfiguration(new GenreEntitySchemaDefinition());
+            // Call the base(parent) version of OnModelCreating
+            base.OnModelCreating(modelBuilder);
         }
         /// <summary>
         /// Effective save of changes in database

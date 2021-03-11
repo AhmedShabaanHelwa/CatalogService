@@ -10,6 +10,9 @@ namespace Catalog.Domain
         /// Id of item
         /// </summary>
         public Guid Id { get; set; }
+        /// <summary>
+        /// Album's name
+        /// </summary>
         public string Name { get; set; }
         /// <summary>
         /// Music album description
@@ -18,7 +21,7 @@ namespace Catalog.Domain
         /// <summary>
         /// Music album release date
         /// </summary>
-        public string ReleaseDate { get; set; }
+        public DateTimeOffset ReleaseDate { get; set; }
         /// <summary>
         /// Music album label
         /// </summary>
@@ -28,6 +31,10 @@ namespace Catalog.Domain
         /// </summary>
         public Price Price { get; set; }
         /// <summary>
+        /// Album's picture link
+        /// </summary>
+        public string PictureUri { get; set; }
+        /// <summary>
         /// Music album format
         /// </summary>
         public string Format { get; set; }
@@ -36,9 +43,17 @@ namespace Catalog.Domain
         /// </summary>
         public int AvailableStock { get; set; }
         /// <summary>
+        /// Foriegn key for Genres table
+        /// </summary>
+        public Guid GenreId { get; set; }
+        /// <summary>
         /// Music album genre
         /// </summary>
         public Genre Genre { get; set; }
+        /// <summary>
+        /// Forien-key for Artists table
+        /// </summary>
+        public Guid ArtistId { get; set; }
         /// <summary>
         /// Album's artist
         /// </summary>
