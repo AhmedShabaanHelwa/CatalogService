@@ -1,10 +1,14 @@
-﻿using System;
+﻿using Catalog.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Catalog.Domain
+namespace Catalog.Domain.Requests.Item
 {
-    public class Item
+    /// <summary>
+    /// Edit/Update request
+    /// </summary>
+    public class EditItemRequest
     {
         /// <summary>
         /// Id of item
@@ -47,17 +51,9 @@ namespace Catalog.Domain
         /// </summary>
         public Guid GenreId { get; set; }
         /// <summary>
-        /// Music album genre
-        /// </summary>
-        public Genre Genre { get; set; }
-        /// <summary>
         /// Forien-key for Artists table
         /// </summary>
         public Guid ArtistId { get; set; }
-        /// <summary>
-        /// Album's artist
-        /// </summary>
-        public Artist Artist { get; set; }
 
     }
 }

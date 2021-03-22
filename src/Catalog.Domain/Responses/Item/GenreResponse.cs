@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
-namespace Catalog.Domain
+namespace Catalog.Domain.Responses.Item
 {
-    public class Genre
+    public class GenreResponse
     {
         /// <summary>
         /// Genre Id
@@ -13,9 +14,5 @@ namespace Catalog.Domain
         /// Genre Description
         /// </summary>
         public string GenreDescription { get; set; }
-        /// <summary>
-        /// Reference to list of albums of this genre
-        /// </summary>
-        public ICollection<Item> Items { get; set; }
     }
 }

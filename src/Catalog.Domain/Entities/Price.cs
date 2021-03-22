@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Catalog.Domain
+namespace Catalog.Domain.Entities
 {
     /// <summary>
     /// Item's price

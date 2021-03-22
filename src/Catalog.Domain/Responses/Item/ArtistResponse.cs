@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Catalog.Domain
+namespace Catalog.Domain.Responses.Item
 {
     /// <summary>
-    /// Artist type
+    /// DTO of Artist response
     /// </summary>
-    public class Artist
+    public class ArtistResponse
     {
         /// <summary>
         /// Artist Id
@@ -17,9 +17,5 @@ namespace Catalog.Domain
         /// Artist name
         /// </summary>
         public string ArtistName { get; set; }
-        /// <summary>
-        /// Reference to a list of albums of this artist
-        /// </summary>
-        public ICollection<Item> Items { get; set; }
     }
 }
